@@ -3,3 +3,4 @@ Rails.application.routes.draw do
   get 'usuarios', to: 'user#index'
 
 end
+#continuar estudo
