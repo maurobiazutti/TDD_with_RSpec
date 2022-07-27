@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_26_235705) do
     t.string "cpf"
     t.string "telefone"
     t.string "genero"
+    t.string "peso"
   end
 
 end
