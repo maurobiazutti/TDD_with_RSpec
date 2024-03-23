@@ -20,11 +20,15 @@ group :development, :test do
 
 ## Instale
 
-  bundle install
+  ```ruby
+    bundle install
+  ```
 
 ## Comando para geral estrutura de arquivos para testes
 
-  rails g rspec:install
+  ```ruby
+    rails g rspec:install
+  ```
 
 ## Descomentar a linha abaixo no arquivo spec/rails_help.rb
 
