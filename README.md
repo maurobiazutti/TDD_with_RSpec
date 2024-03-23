@@ -4,17 +4,19 @@
 
 group :development, :test do
 
-  gem "rspec", "~> 3.13"
-  gem "rspec-rails"
-  gem 'rspec-core', '~> 3.13'
-  gem 'rspec-expectations', '~> 3.13'
-  gem 'rspec-mocks', '~> 3.13'
-  gem 'rspec-support', '~> 3.13', '>= 3.13.1'
+  ```ruby
+    gem "rspec", "~> 3.13"
+    gem "rspec-rails"
+    gem 'rspec-core', '~> 3.13'
+    gem 'rspec-expectations', '~> 3.13'
+    gem 'rspec-mocks', '~> 3.13'
+    gem 'rspec-support', '~> 3.13', '>= 3.13.1'
 
-  gem 'factory_bot_rails'
-  gem 'faker'
-
-end
+    gem 'factory_bot_rails'
+    gem 'faker'
+  ```
+  
+  end
 
 ## Instale
 
@@ -32,7 +34,7 @@ end
 
 ## Comentar a linha abaixo no arquivo spec/rails_help.rb
 
-  # config.fixture_path = Rails.root.join('spec/fixtures')
+  config.fixture_path = Rails.root.join('spec/fixtures')
 
   Fixtures são dados de exemplo usados em testes para preencher o banco de dados com informações conhecidas antes de executar os testes.
   VAMOS USAR FACTORY_BOT_RAILS
