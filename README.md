@@ -44,8 +44,10 @@ group :development, :test do
   VAMOS USAR FACTORY_BOT_RAILS
 
 
-## Configuração das gems
+## Adicione a seguinte configuração em spec/support/factory_bot.rb
 
-No arquivo `spec/rails_helper.rb` adicione o seguinte código: 
-
-
+  ```ruby
+    RSpec.configure do |config|
+    config.include FactoryBot::Syntax::Methods
+    end
+  ```
