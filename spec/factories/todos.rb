@@ -4,3 +4,4 @@ FactoryBot.define do
     description { Faker::Books::Dune.quote }
   end
 end
+ 
