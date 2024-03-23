@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :todo do
-    title { "MyString" }
-    description { "MyString" }
+    title { Faker::Book.title }
+    description { Faker::Books::Dune.quote }
   end
 end
