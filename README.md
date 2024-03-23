@@ -1,24 +1,45 @@
-# README
+# TDD_with_RSpec
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Gems necessárias para testes com RSpec
 
-Things you may want to cover:
+group :development, :test do
 
-* Ruby version
+  gem "rspec", "~> 3.13"
+  gem "rspec-rails"
+  gem 'rspec-core', '~> 3.13'
+  gem 'rspec-expectations', '~> 3.13'
+  gem 'rspec-mocks', '~> 3.13'
+  gem 'rspec-support', '~> 3.13', '>= 3.13.1'
 
-* System dependencies
+  gem 'factory_bot_rails'
+  gem 'faker'
 
-* Configuration
+end
 
-* Database creation
+## Instale
 
-* Database initialization
+  bundle install
 
-* How to run the test suite
+## Comando para geral estrutura de arquivos para testes
 
-* Services (job queues, cache servers, search engines, etc.)
+  rails g rspec:install
 
-* Deployment instructions
+## Descomentar a linha abaixo no arquivo spec/rails_help.rb
 
-* ...
+  Rails.root.glob('spec/support/**/*.rb').sort.each { |f| require f }
+
+  Este comando carrega dinamicamente todos os arquivos Ruby dentro do diretório spec/support e seus subdiretórios no contexto de um projeto Rails.
+
+## Comentar a linha abaixo no arquivo spec/rails_help.rb
+
+  # config.fixture_path = Rails.root.join('spec/fixtures')
+
+  Fixtures são dados de exemplo usados em testes para preencher o banco de dados com informações conhecidas antes de executar os testes.
+  VAMOS USAR FACTORY_BOT_RAILS
+
+
+## Configuração das gems
+
+No arquivo `spec/rails_helper.rb` adicione o seguinte código: 
+
+
