@@ -51,3 +51,10 @@ group :development, :test do
     config.include FactoryBot::Syntax::Methods
     end
   ```
+
+## Adicione esta linha ao seu arquivo spec_helpr.rb
+
+  ```ruby
+    require 'capybara/rails'
+  ```
+  
