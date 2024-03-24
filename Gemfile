@@ -55,7 +55,7 @@ group :development, :test do
   # %w[rspec rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
   #   gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'main'
   # end
-  gem 'rspec", "~> 3.13'
+  gem 'rspec', '~> 3.13'
   gem 'rspec-rails'
   gem 'rspec-core', '~> 3.13'
   gem 'rspec-expectations', '~> 3.13'
