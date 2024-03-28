@@ -182,10 +182,6 @@ GEM
     reline (0.4.3)
       io-console (~> 0.5)
     rexml (3.2.6)
-    rspec (3.13.0)
-      rspec-core (~> 3.13.0)
-      rspec-expectations (~> 3.13.0)
-      rspec-mocks (~> 3.13.0)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.0)
@@ -254,12 +250,7 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.1)
-  rspec (~> 3.13)
-  rspec-core (~> 3.13)
-  rspec-expectations (~> 3.13)
-  rspec-mocks (~> 3.13)
-  rspec-rails
-  rspec-support (~> 3.13, >= 3.13.1)
+  rspec-rails (~> 6.1, >= 6.1.2)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
