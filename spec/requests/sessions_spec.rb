@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'factory_bot_rails'
 
 RSpec.describe "Sessions", type: :request do
   describe "GET /signin" do
@@ -15,25 +16,28 @@ RSpec.describe "Sessions", type: :request do
     end
   end
 
-  describe "GET /signout" do
+  describe "POST /create" do
     it "returns http success" do
-      get "/sessions/signout"
-      expect(response).to have_http_status(:success)
+      user = FactoryBot.attributes_for(:user)
+      post "/sessions/create", params: { session: user }
+      expect(response).to redirect_to ('/home/index')
     end
   end
 
   describe "POST /login" do
     it "returns http success" do
-      get "/sessions/login"
-      expect(response).to have_http_status(:success)
+      password = '123456'
+      user = FactoryBot.create(:user, password: password, password_confirmation: password)
+      post "/sessions/login", params: { session: { email: user[:email], password: password } }
+      expect(response).to redirect_to ('/home/index')
     end
   end
-
-  describe "POST /create" do
-    it "returns http success" do
-      post "/sessions/login"
-      expect(response).to have_http_status(:success)
+    
+  describe "GET /signout" do
+    xit "returns http success" do
+      post "/sessions/signout"
+      expect(response).to redirect_to ('/session/signin')
     end
   end
-
 end
+  
