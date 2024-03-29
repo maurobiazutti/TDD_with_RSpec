@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :todos
+  resources :user_addresses
   get 'home/index'
   get 'sessions/signin'
   get 'sessions/signup'
