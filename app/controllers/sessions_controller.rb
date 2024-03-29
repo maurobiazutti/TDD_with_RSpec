@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  
+  skip_before_action :authenticate
+
   def signin
   end
 
@@ -12,6 +13,7 @@ class SessionsController < ApplicationController
   def create
     user = User.new(session_params)
     if user.save
+      session[:current_user_id] = user.id
       redirect_to home_index_path
       return
     end
@@ -22,6 +24,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: session_params[:email])
     
     if user && user.authenticate(session_params[:password])
+      session[:current_user_id] = user.id
       redirect_to home_index_path
       return
     end
@@ -31,6 +34,6 @@ class SessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:session).permit( :name, :email, :password, :password_confirmation )
+    params.require(:session).permit(:name, :email, :password, :password_confirmation )
   end
 end

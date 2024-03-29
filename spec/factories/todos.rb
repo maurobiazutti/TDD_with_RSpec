@@ -1,6 +1,8 @@
 FactoryBot.define do
   factory :todo do
-    title { Faker::Book.title }
-    description { Faker::Books::Dune.quote }
+    title { "MyString" }
+    descripiton { "MyString" }
+    completed { false }
+    date { "2024-03-28 19:30:01" }
   end
 end
